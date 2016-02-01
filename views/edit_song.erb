@@ -1,0 +1,12 @@
+<% if logged_in? then %>
+	<p>Song bearbeiten:</p>
+	<p></p>
+	<form action="/songs/<%= @this_song["id"].to_s %>" method="post" >
+	  <p>Titel: <input type="text" name="titel" value="<%= @this_song["titel"] %>"></p>
+	  <p>Songtext: <input type="text" name="songtext" value="<%= @this_song["songtext"] %>"></p>
+	  <p>Laenge in Sek.: <input type="text" name="laenge" value="<%= @this_song["laenge"] %>"></p>
+	  <p>Erschienen im Jahr: <input type="text" name="erschienen_in" value="<%= @this_song["erschienen_in"] %>"></p>
+	  <input type="hidden" name="_method" value="put">
+	  <input type="submit" value="Song speichern">
+	</form>
+<% end %>

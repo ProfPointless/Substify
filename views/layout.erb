@@ -1,0 +1,33 @@
+<% title="Substify" %>
+<!doctype html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1><%= title %></h1>
+    <nav>
+        <ul class="nav">
+          <li><a href="/" title="Home">Home</a></li>
+          <li><a href="/about" title="About">About</a></li>
+          <li><a href="/songs" title="Songs">Songs</a></li>
+          <li><a href="/new" title="Neuer Song">Neuer Song</a></li>
+          <li><a href="/contact" title="Contact">Contact</a></li>
+          <li class="user">
+            <% if logged_in? then %>
+              <%= current_user["username"] %> <a href="/logout">abmelden</a>
+            <% else %>
+              <a href="/login">anmelden</a>
+            <% end %>
+          </li>
+        </ul>   
+    </nav>
+  </header>
+  <section>
+    <%= yield %>
+  </section>
+</body>
+</html>

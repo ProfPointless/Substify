@@ -1,0 +1,10 @@
+<p>Song bearbeiten:</p>
+  
+<form action="/songs/edit/<%= @song[0]["id"] %>" method="post" >
+  <p>Titel: <input type="text" name="titel" value="<%= @song[0]["titel"] %>"></p>
+  <p>Songtext: <input type="text" name="songtext" value="<%= @song[0]["songtext"] %>"></p>
+  <p>Laenge in Sek.: <input type="text" name="laenge" value="<%= @song[0]["laenge"] %>"></p>
+  <p>Erschienen im Jahr: <input type="text" name="erschienen_in" value="<%= @song[0]["erschienen_in"] %>"></p>
+  <input type="hidden" name="_method" value="put">
+  <input type="submit" value="Song speichern">
+</form>

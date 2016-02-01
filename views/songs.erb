@@ -1,0 +1,15 @@
+<% if logged_in? then %>
+    <p>Songs von Frank Sinatra:</p>
+    <% for i in 0..@songs.size-1 do %>
+        <p>Titel: <%= @songs[i]["titel"] %></p>
+        <p>Titel: <%= @songs[i]["songtext"] %></p>
+        <p>Dauer: <%= @songs[i]["laenge"] %> Sekunden</p>
+        <p>Erscheinungsjahr: <%= @songs[i]["erschienen_in"] %></p>
+        <p> <a href="/songs/<%= @songs[i]["id"] %>/edit">Song bearbeiten</a></p>
+        <form action="/song/<%= @songs[i]["id"] %>" method="post"> 
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Datensatz löschen"> 
+        </form>
+        <p>-------------------------------------------------</p>
+    <% end %>
+<% end %>

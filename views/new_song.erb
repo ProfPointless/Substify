@@ -1,0 +1,11 @@
+<% if logged_in? then %>
+	<p>Neuen Song anlegen:</p>
+
+	<form action="/new" method="post">
+	  <p>Titel: <input type="text" name="titel" placeholder="Titel eingeben"></p>
+	  <p>Songtext: <input type="text" name="songtext" placeholder="Songtext eingeben"></p>
+	  <p>Laenge in Sek.: <input type="text" name="laenge" placeholder="Länge in Sek. eingeben"></p>
+	  <p>Erschienen im Jahr: <input type="text" name="erschienen_in" placeholder="Jahreszahl eingeben"></p>
+	  <input type="submit" value="Song speichern">
+	</form>
+<% end %>

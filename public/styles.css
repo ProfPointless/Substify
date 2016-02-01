@@ -1,0 +1,64 @@
+h1 {
+  color: #903;
+  font: 32px/1 Helvetica, Arial, sans-serif;
+}
+header h1 {
+  font-size: 40px;
+  line-height: 80px;
+  background: transparent url(/images/logo.png) 0 0 no-repeat;
+  padding-left: 84px;
+}
+p{
+font: 13px/1.4 Helvetica, Arial, sans-serif;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+html, body, ul.nav {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+th {
+	text-align: left;
+}
+
+ul.nav {
+	width: 100%;
+	font-weight: bold;
+}
+
+ul.nav li {
+	margin-right: 2em;
+	display: inline;
+}
+
+ul.nav a, ul.nav a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+li.user {
+	position: absolute;
+	right: 0px;
+}
+
+.tablediv { 
+		  float: left; 
+		  margin: 1cm;
+}
+
+.byname {
+		 background-color:#99FF99;
+		}
+
+.anonym {
+		 background-color:#99FF99;
+		}
+
+.urgent {
+		 background-color:#FFAA00;
+}
